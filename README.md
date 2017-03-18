@@ -1,8 +1,8 @@
-#Heroku Deployment
+# Heroku Deployment
 
-##Instruction
+## Instruction
 
-###Steps
+### Steps
 
 1. Installing Heroku's CLI
 1. Setting up the environment
@@ -17,7 +17,7 @@
 >[Github Tutorial](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
 
 
-####Installing Heroku's CLI
+#### Installing Heroku's CLI
 
 Head too ```https://devcenter.heroku.com/articles/heroku-cli``` to this address and follow the instructions for your OS.
 
@@ -31,7 +31,7 @@ Password (typing will be hidden):
 Authentication successful.
 ```
 
-####Setting up the environment
+#### Setting up the environment
 
 While in the folder of your project, after you have Heroku's CLI installed, throw his command.
 
@@ -66,7 +66,7 @@ web: vendor/bin/heroku-php-apache2 PROJECT_ROOT_FOLDER/
 
 We will also need to setup a composer.json or package.json to let it know what needs to be installed for this project, depending on Node or PHP!
 
-#####composer.json
+##### composer.json
 
 ```json
 {
@@ -83,7 +83,7 @@ require('../vendor/autoload.php');
 ```
 
 
-#####package.json
+##### package.json
 
 ```json
 {
@@ -111,7 +111,7 @@ require('../vendor/autoload.php');
 
 >The only thing this one HAS to have is a scripts section with the start condition. This is what Heroku will use to actually launch your appilcation. The rest will be standard package.json additions from using npm within that folder.
 
-####Establishing Heroku Pipelines
+#### Establishing Heroku Pipelines
 
 
 1) Head over to Heroku and log in on their front page. This will take you to their dashboard. You will see your application you created already on the server. This application will be blank so far because we haven't actually pushed anything to Heroku yet.
@@ -141,7 +141,7 @@ You will see a "new" dropdown on the right-hand side. Click that and click creat
 
 ![Imgur](http://i.imgur.com/TLjIiox.png)
 
-####Pushing the App to Heroku
+#### Pushing the App to Heroku
 
 
 Now that we have linked our staging server to the github repo we want to push forward too. We simply need to make a push directly to the master branch for our server to hook into git. Once this occurs the server will automatically pull down the new build, setup the server once more for your code and attempt to run it.
@@ -151,7 +151,7 @@ git push origin master
 ```
 
 
-####Deploying from Heroku
+#### Deploying from Heroku
 
 Once you have gotten a chance to examine your code on your staging server and are happy with its outcome. You need only to click "Promote to production..." This will automatically push it to your production server which will go down for a moment while it rerenders everything with your changes.
 
